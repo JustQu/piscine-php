@@ -1,0 +1,15 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles coordinates and color of a vertex in
+homogeneous coordinates.
+
+An instance can be contructed from distinct x, y, z constitutives
+new Vertex( array( 'x' => 1.1, 'y' => 2.2, 'z' => 3.3);
+
+and also with optional homogeneous coordinate w 
+and intsance of Color class color:
+new Vertex( array( ... [, w => '5.5'] [, color => instanceOfColor]))
+
+Default values for w is 1 and 0xFFFFFF for color;
+
+Vertex class does not provide methods.
+---------------------------------------------------------------------- Vertex ->

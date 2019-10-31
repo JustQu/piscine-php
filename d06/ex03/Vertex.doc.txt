@@ -1,0 +1,48 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles coordinates and color of a vertex in
+homogeneous coordinates.
+
+An instance can be contructed from distinct x, y, z constitutives
+new Vertex( array( 'x' => 1.1, 'y' => 2.2, 'z' => 3.3);
+
+and also with optional homogeneous coordinate w 
+and intsance of Color class color:
+new Vertex( array( ... [, w => '5.5'] [, color => instanceOfColor]))
+
+Default values for w is 1 and 0xFFFFFF for color;
+
+The class provides the following methods :
+
+Vertex toAffine():
+Return a new vertex trnsformed to affine coordinates.
+
+float getX():
+Return the x coordinate;
+
+float getY():
+Return the y coordinate.
+
+float getZ():
+Return the z coordinate.
+
+float getW():
+Return the w homogeneous coordinate.
+
+Color getColor():
+Return the color of the vertex;
+
+setX(float $x):
+Set the x coordinate.
+
+setY(float $y):
+Set the y coordinate.
+setZ(float $z):
+Set the z coordinate.
+	
+setW(float $w):
+Set the w homogeneous coordinate.
+
+setColor(Color $color);
+Set the color of the vertex.
+
+---------------------------------------------------------------------- Vertex ->

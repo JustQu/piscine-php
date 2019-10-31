@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS db_dmelessa;
+CREATE DATABASE `db_dmelessa`;

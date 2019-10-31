@@ -1,0 +1,65 @@
+<head>
+	<title>
+		balloon
+	</title>
+	<style>
+		#back
+		{
+			width: 200;
+			height: 200;
+			background-color: red;
+			border-radius: 1000000px;
+		}
+	</style>
+</head>
+<body>
+	<div id="back" onclick="func('blow')" onmouseleave = "func('not')">
+		<script>
+			function func(string) {
+				var num = 10; 
+				if (string != 'blow'){
+					num = -5;
+				}
+
+				var balloon = document.getElementById('back');
+				var style = window.getComputedStyle(balloon);
+				var width = style.getPropertyValue('width');
+				var color = style.getPropertyValue('background-color');
+
+				balloon.style.width = parseInt(width) + num + 'px';
+				balloon.style.height = parseInt(width) + num + 'px';
+
+				var width = style.getPropertyValue('width');
+				if (parseInt(width) < 200){
+					balloon.style.width = 200 + 'px';
+					balloon.style.height = 200 + 'px';
+				} else if (parseInt(width) > 420){
+					balloon.style.width = 200 + 'px';
+					balloon.style.height = 200 + 'px';
+				}
+
+				if (string != 'blow'){
+					if (color == 'rgb(255, 0, 0)') {
+						balloon.style.backgroundColor = 'rgb(0, 128, 0)';
+					} else if (color == 'rgb(0, 128, 0)') {
+						balloon.style.backgroundColor = 'blue';
+					} else {
+						balloon.style.backgroundColor = 'red';
+					}
+				} else {
+					if (color == 'rgb(255, 0, 0)') {
+						balloon.style.backgroundColor = 'blue';
+					} else if (color == 'rgb(0, 128, 0)') {
+						balloon.style.backgroundColor = 'red';
+					} else {
+						balloon.style.backgroundColor = 'green';
+					}
+				}
+			}
+
+			function colorReverse() {
+
+			}
+		</script>
+	</div>
+</body>

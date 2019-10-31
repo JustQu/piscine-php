@@ -8,9 +8,7 @@ class Color
 
 	static public function doc()
 	{
-		echo "\n";
-		echo file_get_contents("./Color.doc.txt");
-		echo "\n";
+		return file_get_contents("./Color.doc.txt");
 	}
 
 	public function __construct($a)
@@ -25,18 +23,6 @@ class Color
 			$this->blue = intval($a['blue']);
 			$this->green = intval($a['green']);
 		}
-		if ($this->red < 0)
-			$this->red = 0;
-		if ($this->green < 0)
-			$this->green = 0;
-		if($this->blue < 0)
-			$this->blue = 0;
-		if($this->red > 255)
-			$this->red = 255;
-		if($this->green > 255)
-			$this->green = 255;
-		if($this->blue > 255)
-			$this->blue = 255;
 
 		if (Self::$verbose)
 			printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n", $this->red, $this->green, $this->blue);
@@ -51,10 +37,9 @@ class Color
 	public function __ToString()
 	{
 		return (vsprintf("Color( red: %3d, green: %3d, blue: %3d )", array($this->red, $this->green, $this->blue)));
-
 	}
 
-	public function add($Color)
+	public function add(Color $Color)
 	{
 		$newColor = new Color(array('red' => $this->red + $Color->red,
 								'green' => $this->green + $Color->green,
@@ -62,7 +47,7 @@ class Color
 		return $newColor;
 	}
 
-	public function sub($Color)
+	public function sub(Color $Color)
 	{
 		$newColor = new Color(array('red' => $this->red - $Color->red,
 								'green' => $this->green - $Color->green,

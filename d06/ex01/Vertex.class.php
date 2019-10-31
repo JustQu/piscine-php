@@ -13,47 +13,46 @@ class Vertex
 
 	static public function doc()
 	{
-		echo "\n";
-		echo file_get_contents("./Vertex.doc.txt");
-		echo "\n";
+		return file_get_contents("./Vertex.doc.txt");
 	}
 
-	public function __construct($args)
+	public function __construct($kwargs)
 	{
-		$this->_x = $args['x'];
-		$this->_y = $args['y'];
-		$this->_z = $args['z'];
-		if (isset($args['w'])){
-			$this->_w = intval($args['w']);
+		$this->_x = floatval($kwargs['x']);
+		$this->_y = floatval($kwargs['y']);
+		$this->_z = floatval($kwargs['z']);
+		if (isset($kwargs['w'])){
+			$this->_w = floatval($kwargs['w']);
 		}
-		if(isset($args['color']) && $args['color'] instanceof Color){
-			$this->_color = $args['color'];
+		if(isset($kwargs['color']) && $kwargs['color'] instanceof Color){
+			$this->_color = $kwargs['color'];
 		}else{
 			$this->_color = new Color(array('red' => 255, 'green' => 255, 'blue' => 255));
 		}
 		
 		if(Self::$verbose)
-			printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, " . $this->_color . " constructed\n",
+			printf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, " . $this->_color . " ) constructed\n",
 				$this->_x, $this->_y, $this->_z, $this->_w);
 	}
 
 	function __destruct()
 	{
 		if (Self::$verbose)
-			printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, " 	. $this->_color . " destructed\n",
+			printf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, " 	. $this->_color . " ) destructed\n",
 				$this->_x, $this->_y, $this->_z, $this->_w);
 	}
 
-	public function __ToString()
+	public function __toString()
 	{
 		if(Self::$verbose)
-			return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, ", $this->_x, $this->_y, $this->_z, $this->_w) . $this->_color . " )";
-		return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f )",
+			return sprintf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f, ", $this->_x, $this->_y, $this->_z, $this->_w) . $this->_color . " )";
+		return sprintf("Vertex( x: %.2f, y: %.2f, z:%.2f, w:%.2f )",
 			$this->_x, $this->_y, $this->_z, $this->_w);
 	}
 }
 
-require_once '../ex00/Color.class.php';
+require_once 'Color.class.php';
+require_once 'Vertex.class.php';
 
 Color::$verbose = False;
 

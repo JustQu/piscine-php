@@ -1,0 +1,55 @@
+<- Vector ----------------------------------------------------------------------
+Vector class handles vector in homogeneous coordinates.
+
+Constructor wait for an array with 'dest' key and optional 'orig' key
+which are ins of Vertex;
+new Vertex( array( 'dest' => instanceOfVertex[, 'orig' => instanceOfVertex]);
+
+Vector coordinates equals the difference between coordinates of 
+'orig' and 'dest' vertices.
+Homogeneous coordinate 'w' equals to 0;
+If only 'dest' key provided then 'orig' Vertex equals to
+Vertex(array('x' => 0, 'y' => 0, 'z' => 0, 'w' => 1)) by default.
+
+The class provides the following methods :
+
+float magnitude():
+Returns the vector’s length.
+
+Vector normalize():
+Returns a normalized version of the vector. If the vector is
+already normalized, returns a fresh copy of the vector.
+
+Vector add( Vector $rhs ):
+Returns the sum vector of both vectors.
+
+Vector sub( Vector $rhs ):
+Returns the difference vector of both vectors.
+
+Vector opposite():
+Returns the opposite vector.
+
+Vector scalarProduct( $k ):
+Returns the multiplication of the vector with a scalar.
+
+float dotProduct( Vector $rhs ):
+Returns the scalar multiplication of both vectors.
+
+float cos( Vector $rhs ):
+Returns the angle’sAppendix cosine between both vectors.
+
+Vector crossProduct( Vector $rhs ):
+Returns the cross multiplication of both vectors (right-hand mark!)
+
+float getX():
+Returns the x coordinate.
+
+float getY():
+Returns the y coordinate.
+
+float getZ():
+Returns the z coordinate.
+
+float getW():
+Returns the w component.
+---------------------------------------------------------------------- Vector ->

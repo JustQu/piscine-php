@@ -13,22 +13,23 @@ class Color
 		echo "\n";
 	}
 
-	public function __construct($a)
+	public function __construct(array $kwargs)
 	{
-		if (isset($a['rgb'])){
-			$rgb = intval($a['rgb']);
+		if (isset($kwargs['rgb'])){
+			$rgb = intval($kwargs['rgb']);
 			$this->red = ($rgb >> 16) & 0xff;
 			$this->green = ($rgb >> 8) & 0xff;
 			$this->blue = $rgb & 0xff;
-		} else if (isset($a['red']) && isset($a['green']) && isset($a['blue'])){
-			$this->red = intval($a['red']);
-			$this->blue = intval($a['blue']);
-			$this->green = intval($a['green']);
+		} else if (isset($kwargs['red']) && isset($kwargs['green']) && isset($kwargs['blue'])){
+			$this->red = intval($kwargs['red']);
+			$this->blue = intval($kwargs['blue']);
+			$this->green = intval($kwargs['green']);
 		}
 		
 		if (Self::$verbose)
 			printf("Color( red: %3d, green: %3d, blue: %3d ) constructed.\n", $this->red, $this->green, $this->blue);
 	}
+
 
 	function __destruct()
 	{

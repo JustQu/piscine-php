@@ -1,0 +1,31 @@
+
+<- Vector ----------------------------------------------------------------------
+Matrix class handles transformation in homogeneous coordinates.
+
+Constructor wait for an array with 'preset' key which contains the type of the matrix
+defined in constant values of the class.
+new Vertex( array( 'preset' => Self::type);
+
+if 'preset key' equals to Self::IDENTITY then no additional arguments need;
+if 'preset key' equals to Self::SCALE then 'scale' key which defines the scale coefficient required;
+if 'preset key' equals to Self::RX|Self::RY|Self::RZ then 'angle' key which defines the rotation angle
+around the corresponding axis required;
+if 'preset key' equals to Self::TRANSLATION then 'vtc' key which defines the Vector
+containing the transformation coordinates required;
+if 'preset key' equals to Self::PROJECTION then the following keys are required:
+'fov': field of view in degrees;
+'ratio': projected image ratio;
+'near': projection's near clipping plane;
+'far': projection's far clipping plane;
+
+The class provides the following methods :
+
+float getElement($column, $row):
+Returns element in the specified column and row.
+
+Matrix mult( Matrix $rhs ):
+Returns the multiplication of both matrices
+
+Vertex transformVertex( Vertex $vtx ): 
+returns a new vertex resulting from the transformation of the vertex by the matrix.
+---------------------------------------------------------------------- Vector ->

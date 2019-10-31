@@ -1,0 +1,80 @@
+.wrapper { 
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #2b1de8, #dd00f3, #dd00f3);
+}
+.wrapper-text { 
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #2b1de8, #dd00f3, #dd00f3);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+img{
+	width: 42vw;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.table1 {
+	margin: auto;
+	height: 100%;
+}
+body {
+	background-color: black;
+}
+td
+{
+	border-radius: 1vh;
+	color:white;
+	width: 8vw;
+	padding: 0px;
+}
+.number {
+	margin: 0;
+	text-align: left;
+	font-size: 1vmin;
+	margin-top: 2.5vmin;
+}
+.atomic-weight {
+	margin: auto;
+	font-size: 1vmin;
+	text-align: right;
+	margin-bottom: 2.5vmin;
+	margin-right: 3px;
+}
+.name {
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2vmin;
+}
+.nonmetals{
+	background: rgb(153, 196, 85)
+}
+.alcali-metal{
+	background: rgb(229,95,90);
+}
+.alkaline-earth-metal{
+	background: rgb(240, 157, 75)
+}
+.transition-metal{
+	background: rgb(157, 175, 200)
+}
+.metalloid{
+	background: rgb(74,159,72)
+}
+.post-transition-metal{
+	background: rgb(115, 144, 197)
+}
+.halogen{
+	background: rgb(247, 205, 69)
+}
+.lactanoid{
+	background: rgb(124, 190, 215)
+}
+.noble-gase{
+	background: rgb(233, 159, 154)
+}
+.actinoid{
+	background: rgb(80, 172, 192)
+}

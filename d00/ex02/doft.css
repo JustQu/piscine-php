@@ -1,0 +1,173 @@
+.background{
+	background-color: rgb(80, 80, 80);
+}
+.container{
+	background: rgb(144, 144, 144);
+	border-radius: 10px;
+	box-shadow: black 10px 10px 10px;
+}
+.header{
+	width: 1420;
+	height: 140;
+	margin-left: 230px;
+	margin-top: 17px;
+}
+.header #title{
+	position: absolute;
+	margin: 10px 0;
+	height: 110px;
+	margin-left: 5px;
+}
+.header #loupe{
+	position: absolute;
+	margin-top: 15px;
+	margin-left: 1135px;
+}
+.header #cross{
+	position: absolute;
+	margin-top: 110px;
+	margin-left: 1390px;
+}
+.header #refresh{
+	position: absolute;
+	width: 20px;
+	margin-top: 10px;
+	margin-left: 1390px;
+}
+.menu{
+	position: absolute;
+	width: 140px;
+	height: 425px;
+	margin-top: 20px;
+	margin-left: 260px;
+}
+.menu #arrow {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	display:block;
+	width: 65px;
+}
+.menu #main{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display:block;
+	width: 65px;
+}
+.menu #oeil{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display:block;
+	width: 65px;
+	border:5px solid red;
+}
+.menu #outil{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display:block;
+	width: 65px;
+}
+.menu #chat-icon{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display:block;
+	width: 65px;
+}
+
+.content{
+	width: 1020;
+	height: 580;
+	margin-top: 20px;
+	margin-left: 430px;
+	position: absolute;
+}
+.content #cluster{
+	margin-top: 10px;
+	width: 1000;
+	height: 560;
+	margin-left: 10px;
+
+}
+
+.panel{
+	position: absolute;
+	margin-left: 1480px;
+	width: 140px;
+	margin-top: 20px;
+	height: 425px;
+}
+.panel #towel{
+	width: 64px;
+	margin-top: 10px;
+	margin: 0 auto;
+	display:block;
+}
+.panel #book{
+	width: 64px;
+	margin-top: 10px;
+	display:block;
+	margin: 0 auto;
+}
+.panel #brick{
+	margin: 0 auto;
+	margin-top: 15px;
+	display:block;
+	width: 120px;
+	height: 70px;
+	background-image: url(resources/brick.jpg);
+	background-repeat:repeat;
+}
+
+.search{
+	width: 520px;
+	height: 170px;
+	position: absolute;
+	background-color: rgb(148, 251, 150);
+	margin-top: 525px;
+	margin-left: 185px; 
+}
+
+.text{
+	letter-spacing: 2px;
+	font-size:16px;
+	margin-top: 5px;
+	margin-left: 10px;
+	font-family: sans-serif;
+}
+
+.textb{
+	font-family: serif;
+	font-size: 200%;
+	font-style: bold;
+}
+
+.text2{
+	margin-top: -15px;
+}
+
+.text3{
+	letter-spacing: 1px;
+	margin-top: -15px;
+	font-style: italic;
+}
+.shd{
+	text-shadow:5px 5px 5px red
+}
+
+input{
+	border: 3px inset;
+	width: 385px;
+	height: 20px;
+	margin-top: -15px;
+	margin-left: 10px;
+}
+button{
+	font-size:13px;
+	height:20px;
+	border: 1px solid rgb(169, 169, 169);
+	background-color: rgb(237, 237, 237);
+}
